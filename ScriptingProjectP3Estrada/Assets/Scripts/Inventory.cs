@@ -10,7 +10,26 @@ public class Inventory : MonoBehaviour
         public int grenades;
         public int rockets;
         public float fuel;
+
+        public Stuff(int bul, float fu)
+        {
+            bullets = bul;
+            fuel = fu;
+        }
+
+        //Constuctor
+        public Stuff ()
+        {
+            bullets = 1;
+            grenades = 1;
+            rockets = 1;
+        }
     }
+
+    // Created an Instance (an Object) ofthe Stuff class
+    public Stuff myStuff;
+
+    public Stuff myOtherStuff = new Stuff(50, 1.5f);
     // Start is called before the first frame update
     void Start()
     {
